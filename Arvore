@@ -1,10 +1,7 @@
 class Arvore {
     private Node comeco;
 //ADIÇÃO
-    public void adicionar(Integer info) {
-        comeco = adicionarArvore(comeco, info);
-    }
-
+    
     public Node adicionarArvore(Node node, Integer info) {
         if (node == null) {
             node = new Node();
@@ -19,9 +16,6 @@ class Arvore {
         return node;
     }
 //REMOÇÃO
-    public void remover(Integer info) {
-        comeco = removerArvore(comeco, info);
-    }
 
     public Node removerArvore(Node node, Integer info) {
         if (node == null) {
