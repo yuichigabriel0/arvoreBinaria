@@ -1,0 +1,41 @@
+//GABRIEL YUICHI SUZAKI
+public class Main {
+    public static void main(String[] args) {
+        Arvore a = new Arvore();
+        System.out.println("//////////inserindo//////////");
+        a.setComeco(a.adicionarArvore(a.getComeco(),14));
+        a.imprimeNode(a.getComeco());
+        a.adicionarArvore(a.getComeco(),17);
+        a.adicionarArvore(a.getComeco(),4);
+
+        a.adicionarArvore(a.getComeco(),3);
+        a.adicionarArvore(a.getComeco(),2);
+
+        a.adicionarArvore(a.getComeco(),18);
+
+        a.adicionarArvore(a.getComeco(),9);
+        a.adicionarArvore(a.getComeco(),8);
+        a.imprimeNode(a.getComeco());
+        System.out.println("//////////Removendo manualmente//////////");
+        a.removerArvore(a.getComeco(),17);
+        a.imprimeNode(a.getComeco());
+        System.out.println(a.encontrarMinimo(a.getComeco()));
+        System.out.println("//////////Remover maximo//////////");
+
+        int max = a.encontrarMaximo(a.getComeco());
+        a.removerArvore(a.getComeco(),max);
+        a.imprimeNode(a.getComeco());
+        System.out.println("//////////Remover minimo//////////");
+        int min = a.encontrarMinimo(a.getComeco());
+
+        a.removerArvore(a.getComeco(),min);
+        a.imprimeNode(a.getComeco());
+        System.out.println("//////////Print Ordens//////////");
+        System.out.println("Preordem");
+        a.preordem(a.getComeco());
+        System.out.println("\nInordem");
+        a.inordem(a.getComeco());
+        System.out.println("\nPosordem");
+        a.posordem(a.getComeco());
+    }
+}
